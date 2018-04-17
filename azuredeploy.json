@@ -384,7 +384,7 @@
 			"app": "OpenShiftContainerPlatform",
 			"provider": "9d2c71fc-96ba-4b4a-93b3-14def5bc96fc"
 		},
-		"bastionVmSize": "Standard_DS2_v2",
+		"bastionVmSize": "Standard_DS3_v2",
 		"singlequote": "'",
 		"sshKeyPath": "[concat('/home/', parameters('adminUsername'), '/.ssh/authorized_keys')]",
 		"bastionPrepScriptUrl": "[concat(parameters('_artifactsLocation'), '/scripts/bastionPrep.sh')]",
@@ -1228,6 +1228,7 @@
 						}
 					}
 				}],
+				"enableAcceleratedNetworking": true,
 				"networkSecurityGroup": {
 					"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('openshiftBastionHostname'), '-nsg'))]"
 				}
@@ -1270,6 +1271,7 @@
 						]
 					}
 				}],
+				"enableAcceleratedNetworking": true,
 				"networkSecurityGroup": {
 					"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('openshiftMasterHostname'), '-nsg'))]"
 				}
@@ -1306,6 +1308,7 @@
 						}]
 					}
 				}],
+				"enableAcceleratedNetworking": true,
 				"networkSecurityGroup": {
 					"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('openshiftInfraHostname'), '-nsg'))]"
 				}
@@ -1338,6 +1341,7 @@
 						}
 					}
 				}],
+				"enableAcceleratedNetworking": true,
 				"networkSecurityGroup": {
 					"id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('openshiftNodeHostname'), '-nsg'))]"
 				}
