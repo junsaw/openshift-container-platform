@@ -7,6 +7,9 @@ POOL_ID=$3
 PRIVATEKEY=$4
 SUDOUSER=$5
 
+echo $USERNAME_ORG
+echo $PASSWORD_ACT_KEY
+
 # Generate private keys for use by Ansible
 echo $(date) " - Generating Private keys for use by Ansible for OpenShift Installation"
 
