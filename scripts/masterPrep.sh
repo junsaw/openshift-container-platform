@@ -8,6 +8,9 @@ SUDOUSER=$4
 LOCATION=$5
 STORAGEACCOUNT=$6
 
+echo $USERNAME_ORG
+echo $PASSWORD_ACT_KEY
+
 # Remove RHUI
 
 rm -f /etc/yum.repos.d/rh-cloud.repo
